@@ -35,12 +35,11 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/Settings/IceWM}
 install icewmconf-2.1.0 $RPM_BUILD_ROOT%{_bindir}/icewmconf
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/IceWM
 
-gzip -9nf changelog
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc changelog
 %attr(755,root,root) %{_bindir}/*
 %attr(644,root,root) %{_applnkdir}/Settings/IceWM/*
