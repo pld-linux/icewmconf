@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://sdboyd.dyndns.org/icewmconf/%{name}-%{version}.tar.gz
+# Source0-md5:	e5d599142116daa29f348e3eff52cc55
 Source1:	%{name}.desktop
 #Source2:	%{name}.png
 #Source3:	%{name}_16x16.xpm
