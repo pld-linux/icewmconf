@@ -5,8 +5,6 @@ Version:	1.0.0
 Release:	1
 License:	GPL
 Group:		X11/Window Managers/Tools
-Group(de):	X11/Fenstermanager/Werkzeuge
-Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	http://www.stu.uea.ac.uk/~markj/icewmconf/%{name}-%{version}.gz
 Source1:	%{name}.desktop
 #Source2:	%{name}.png
