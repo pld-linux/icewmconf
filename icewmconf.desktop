@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Icewm-Conf
+Name[pl]=Icewm-Conf
+Comment=Simple graphical configuration for Icewm
+Comment[pl]=Prosty graficzny konfigurator dla icewm
+Icon=
+Exec=icewmconf.gz
+Terminal=0
+Type=Application
+
