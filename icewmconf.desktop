@@ -5,6 +5,6 @@ Comment=Simple graphical configuration for Icewm
 Comment[pl]=Prosty graficzny konfigurator dla icewm
 Icon=
 Exec=icewmconf
-Terminal=0
+Terminal=false
 Type=Application
 
