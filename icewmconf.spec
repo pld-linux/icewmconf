@@ -28,7 +28,7 @@ zasadzie prosty skrypt.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir} 
+install -d $RPM_BUILD_ROOT%{_bindir}
 install -d $RPM_BUILD_ROOT%{_applnkdir}/Settings/IceWM
 
 install %{SOURCE0} $RPM_BUILD_ROOT%{_bindir}/icewmconf.gz
