@@ -4,7 +4,7 @@ Name[pl]=Icewm-Conf
 Comment=Simple graphical configuration for Icewm
 Comment[pl]=Prosty graficzny konfigurator dla icewm
 Icon=
-Exec=icewmconf.gz
+Exec=icewmconf
 Terminal=0
 Type=Application
 
