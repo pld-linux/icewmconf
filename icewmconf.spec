@@ -1,5 +1,5 @@
 Summary:	Very simple graphical configuration utility for icewm
-Summary(pl):	Bardzo proste graficzne narzêdzie do konfiguracji icewm'a
+Summary(pl):	Bardzo proste graficzne narzêdzie do konfiguracji icewm-a
 Name:		icewmconf
 Version:	1.0.0
 Release:	1
@@ -7,11 +7,12 @@ License:	GPL
 Group:		X11/Window Managers/Tools
 Group(de):	X11/Fenstermanager/Werkzeuge
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
-Source0:	%{name}-%{version}.gz
+Source0:	http://www.stu.uea.ac.uk/~markj/icewmconf/%{name}-%{version}.gz
 Source1:	%{name}.desktop
 #Source2:	%{name}.png
 #Source3:	%{name}_16x16.xpm
 #Source4:	%{name}_32x32.xpm
+URL:		http://www.stu.uea.ac.uk/~markj/icewmconf/
 Requires:	icewm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -24,17 +25,16 @@ Very simple graphical configuration utility for icewm. Its a script.
 Bardzo proste graficzne narzêdzie konfiguracyjne dla icewm. Jest to w
 zasadzie prosty skrypt.
 
-%setup
-
-%build
+%prep
+%setup -q
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__install} -d $RPM_BUILD_ROOT%{_bindir} 
-%{__install} -d $RPM_BUILD_ROOT%{_applnkdir}/Settings/IceWM
+install -d $RPM_BUILD_ROOT%{_bindir} 
+install -d $RPM_BUILD_ROOT%{_applnkdir}/Settings/IceWM
 
-%{__install} %{SOURCE0} $RPM_BUILD_ROOT%{_bindir}/icewmconf.gz
-%{__install} %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/IceWM
+install %{SOURCE0} $RPM_BUILD_ROOT%{_bindir}/icewmconf.gz
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/IceWM
 
 %clean
 rm -rf $RPM_BUILD_ROOT
