@@ -16,7 +16,6 @@ Requires:	tk
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define         _prefix         /usr/X11R6/
 
 %description
 Very simple graphical configuration utility for icewm. Its a script.
