@@ -1,5 +1,5 @@
-Summary:	Very simple graphical configuration utility for icewm
-Summary(pl):	Bardzo proste graficzne narzêdzie do konfiguracji icewm-a
+Summary:	Very simple graphical configuration utility for IceWM
+Summary(pl):	Bardzo proste graficzne narzêdzie do konfiguracji IceWM-a
 Name:		icewmconf
 Version:	2.1.0
 Release:	1
@@ -22,7 +22,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Very simple graphical configuration utility for icewm. Its a script.
 
 %description -l pl
-Bardzo proste graficzne narzêdzie konfiguracyjne dla icewm. Jest to w
+Bardzo proste graficzne narzêdzie konfiguracyjne dla IceWM-a. Jest to w
 zasadzie prosty skrypt.
 
 %prep
