@@ -13,7 +13,7 @@ Source1:	%{name}.desktop
 URL:		http://sdboyd.dyndns.org/icewmconf/
 Requires:	icewm
 Requires:	tk
-BuildArch:  noarch
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define         _prefix         /usr/X11R6/
@@ -22,16 +22,15 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Very simple graphical configuration utility for icewm. Its a script.
 
 %description -l pl
-Bardzo proste graficzne narzêdzie konfiguracyjne dla IceWM-a. Jest to w
-zasadzie prosty skrypt.
+Bardzo proste graficzne narzêdzie konfiguracyjne dla IceWM-a. Jest to
+w zasadzie prosty skrypt.
 
 %prep
-%setup -q -c 
+%setup -q -c
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Settings/IceWM
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/Settings/IceWM}
 
 install icewmconf-2.1.0 $RPM_BUILD_ROOT%{_bindir}/icewmconf
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/IceWM
