@@ -8,4 +8,4 @@ Icon=
 Exec=icewmconf
 Terminal=false
 Type=Application
-
+# vi: encoding=utf-8
