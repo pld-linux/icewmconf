@@ -2,7 +2,7 @@ Summary:	Very simple graphical configuration utility for IceWM
 Summary(pl):	Bardzo proste graficzne narzêdzie do konfiguracji IceWM-a
 Name:		icewmconf
 Version:	2.1.0
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://sdboyd.dyndns.org/icewmconf/%{name}-%{version}.tar.gz
@@ -30,10 +30,10 @@ w zasadzie prosty skrypt.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/Settings/IceWM}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_desktopdir}}
 
 install icewmconf-2.1.0 $RPM_BUILD_ROOT%{_bindir}/icewmconf
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/IceWM
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -42,4 +42,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc changelog
 %attr(755,root,root) %{_bindir}/*
-%attr(644,root,root) %{_applnkdir}/Settings/IceWM/*
+%attr(644,root,root) %{_desktopdir}/*
