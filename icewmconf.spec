@@ -1,17 +1,19 @@
 Summary:	Very simple graphical configuration utility for icewm
 Summary(pl):	Bardzo proste graficzne narzêdzie do konfiguracji icewm-a
 Name:		icewmconf
-Version:	1.0.0
+Version:	2.1.0
 Release:	1
 License:	GPL
 Group:		X11/Window Managers/Tools
-Source0:	http://www.stu.uea.ac.uk/~markj/icewmconf/%{name}-%{version}.gz
+Source0:	http://sdboyd.dyndns.org/icewmconf/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 #Source2:	%{name}.png
 #Source3:	%{name}_16x16.xpm
 #Source4:	%{name}_32x32.xpm
-URL:		http://www.stu.uea.ac.uk/~markj/icewmconf/
+URL:		http://sdboyd.dyndns.org/icewmconf/
 Requires:	icewm
+Requires:	tk
+BuildArch:  noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define         _prefix         /usr/X11R6/
@@ -24,20 +26,22 @@ Bardzo proste graficzne narzêdzie konfiguracyjne dla icewm. Jest to w
 zasadzie prosty skrypt.
 
 %prep
-%setup -q
+%setup -q -c 
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
 install -d $RPM_BUILD_ROOT%{_applnkdir}/Settings/IceWM
 
-install %{SOURCE0} $RPM_BUILD_ROOT%{_bindir}/icewmconf.gz
+install icewmconf-2.1.0 $RPM_BUILD_ROOT%{_bindir}/icewmconf
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/IceWM
 
+gzip -9nf changelog
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc *.gz
 %attr(755,root,root) %{_bindir}/*
 %attr(644,root,root) %{_applnkdir}/Settings/IceWM/*
