@@ -2,7 +2,7 @@ Summary:	Very simple graphical configuration utility for IceWM
 Summary(pl):	Bardzo proste graficzne narzêdzie do konfiguracji IceWM-a
 Name:		icewmconf
 Version:	2.1.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://sdboyd.dyndns.org/icewmconf/%{name}-%{version}.tar.gz
