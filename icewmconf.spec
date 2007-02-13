@@ -1,5 +1,5 @@
 Summary:	Very simple graphical configuration utility for IceWM
-Summary(pl.UTF-8):   Bardzo proste graficzne narzędzie do konfiguracji IceWM-a
+Summary(pl.UTF-8):	Bardzo proste graficzne narzędzie do konfiguracji IceWM-a
 Name:		icewmconf
 Version:	2.1.0
 Release:	3
